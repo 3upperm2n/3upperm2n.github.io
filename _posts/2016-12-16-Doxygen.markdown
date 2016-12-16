@@ -121,6 +121,7 @@ Here are some boilerplates for annotation.
 ```
 
 After documenting every files, run the following command.
+
 ```bash
 $doxygen Doxyfile
 ```
