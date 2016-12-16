@@ -7,16 +7,19 @@ author: "Leiming Yu"
 ---
 
 Install doxygen in ubuntu.
+
 ```bash
 sudo apt-get update && sudo apt-get install doxygen
 ```
 
 To simplify the creation of a configuration file, doxygen can create a template configuration file for you.
+
 ```bash
 doxygen -g
 ```
 
 In the Doxyfile, there are tons of variables. I list those considered to be important.
+
 ```bash
 PROJECT_NAME           = "project x" 
 PROJECT_NUMBER         = 1.0
