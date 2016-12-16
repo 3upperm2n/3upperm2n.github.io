@@ -1,5 +1,6 @@
 #jekyll
-_site
+_site/
+*.jekyll-metadata
 
 # Compiled Object files                                                         
 *.slo                                                                           
