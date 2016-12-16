@@ -74,6 +74,7 @@ GENERATE_DEPRECATEDLIST = YES
 ```
 
 Here are some boilerplates for annotation. 
+
 ```C++
 /**                                                                             
   @brief Result Validation                                                      
