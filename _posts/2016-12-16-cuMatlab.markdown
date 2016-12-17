@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "Build your GPU implementation in Matlab"
+date:   2016-12-16 
+categories: ["gpgpu"]
+author: "Leiming Yu"
+---
+
+### Parallel Computing Toolbox
+With parallel computing toolbox in Matlab, you can build your cuda implementation as follows.
+
+**[1]Create a cuda kernel object**
+
+```bash
+$nvcc -ptx  gpuFun_vectoradd.cu
+```
+
+Build the cuda kernel in matlab.
+
+```matlab
+k = parallel.gpu.CUDAKernel('gpuFun_vectoradd.ptx','gpuFun_vectoradd.cu');
+```
+
+The default is [1 1 1],  the thread block size needs to be customized.
+
+```matlab
+k.ThreadBlockSize = 128
+```
+
+**[2]Run the cuda kernel**
+
+Use workspace variable
+
+```matlab
+A_mat = rand(10,1);
+B_mat = rand(10,1);
+C_mat = zeros(10,1);
+
+result = feval(k, A_mat, B_mat, 10, C_mat)
+```
+
+Use gpuArray variable
+
+```matlab
+i1 = gpuArray(rand(10,1,'single'));
+i2 = gpuArray(rand(10,1,'single'));
+i3 = gpuArray(zeros(10,1,'single'));
+
+result_gpu = feval(k, i1,i2,10,i3)
+```
+
+### cuMatlab 
+If you don't want to pay the license fee to use the parallel computing toolbox,
+you can write your own gpu implementations in matlab.
+
+I have set up two examples, using *cuda kernel and cublas library*, 
+in this repo [cuMatlab](https://github.com/3upperm2n/cuMatlab).
+
+You can develop more complex versions around this boilerplate.
