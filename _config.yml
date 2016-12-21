@@ -15,6 +15,9 @@ twitter_username: yu_leiming
 github_username:  3upperm2n 
 paginate: 10 
 
+# Google services
+google_analytics: UA-89268562-1 
+
 gems: [jekyll-paginate, kramdown]
 # Build settings
 markdown: kramdown
