@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Running"
+date:   2016-12-26 
+categories: ["life"]
+author: "Leiming Yu"
+---
+
+I enjoyed running. 
+
+It keeps me on a healthy living style without too much sitting.
+
+I am training my half-marathon in 2017.
+
+| Race                | Pace    | Final Time | Rank       |
+| ------------------- | :-------: | :----------: | ---------- |
+| B.A.A. 10K          | 8:15/Mi | 51:17      | Top 25.9%  |
+| Aids Walk & Run 5k  | 8:02/Mi | 24:59      | Top 22.8%  |
+
