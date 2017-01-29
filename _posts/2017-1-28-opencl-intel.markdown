@@ -48,6 +48,11 @@ $sudo ldconfig
 
 ### check installation
 If clinfo is not installed, use the following command.
+
+```bash
+$sudo apt-get install clinfo
+```
+
 ```bash
 $sudo apt-get install clinfo
 ```
