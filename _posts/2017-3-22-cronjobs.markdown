@@ -32,6 +32,17 @@ sudo service cron stop  && sudo service cron start
 sudo crontab -l
 ```
 
+### step 5: run job at startup 
+```bash
+@reboot /home/vivek/bin/installnetkit.sh
+```
+
+### step 6: start crond automatically after reboot
+```bash
+sudo update-rc.d cron defaults
+```
+
 ### Reference
 * https://www.liquidweb.com/kb/how-to-display-list-all-jobs-in-cron-crontab/
 * https://vexxhost.com/resources/tutorials/how-to-use-cron-jobs-for-automation-on-ubuntu-14-04/
+* https://www.cyberciti.biz/faq/linux-execute-cron-job-after-system-reboot/
